@@ -54,7 +54,7 @@ public:
     void InstallOs()
     {
         cout << "Dell Computer" << endl;
-        m_osPtr->NameOS();
+        m_osPtr->NameOS();	// 使用基类指针调用具体的方法，利用C++多态实现Bridge模式，这是关键之二 
     }
 };
 
@@ -66,13 +66,13 @@ public:
     void InstallOs()
     {
         cout << "Lenovo Computer" << endl;
-        m_osPtr->NameOS();
+        m_osPtr->NameOS();	// 多态 
     }
 };
 
 int main()
 {
-    DellComputer * DellPtr1 = new DellComputer(new WindowOS);
+    DellComputer * DellPtr1 = new DellComputer(new WindowOS);	// 客户端代码中，可以将Computer类和OS类进行任意组合，这是Bridge模式的优势所在 
     DellPtr1->InstallOs();
 
     DellComputer * DellPtr2 = new DellComputer(new LinuxOS);
