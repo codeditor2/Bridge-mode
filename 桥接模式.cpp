@@ -82,7 +82,7 @@ int main()
     LenovoComputer *LenovoPtr1 = new LenovoComputer(new WindowOS);
     LenovoPtr1->InstallOs();
 
-    LenovoComputer *LenovoPtr2 = new LenovoComputer(new LinuxOS);
+    LenovoComputer *LenovoPtr2 = new LenovoComputer(new UnixOS);
     LenovoPtr2->InstallOs();
 
     system("pause");
