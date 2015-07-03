@@ -72,7 +72,8 @@ public:
 
 int main()
 {
-    DellComputer * DellPtr1 = new DellComputer(new WindowOS);	// 客户端代码中，可以将Computer类和OS类进行任意组合，这是Bridge模式的优势所在 
+	// 这是Bridge模式的优势所在  
+    DellComputer * DellPtr1 = new DellComputer(new WindowOS);	// 客户端代码中，可以将Computer类和OS类进行任意组合
     DellPtr1->InstallOs();
 
     DellComputer * DellPtr2 = new DellComputer(new LinuxOS);
