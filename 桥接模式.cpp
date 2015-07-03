@@ -43,7 +43,7 @@ public:
     virtual void InstallOs() = 0;
     
 protected:
-    OS *m_osPtr;
+    OS *m_osPtr;	// 包含有一个OS对象的指针，这是关键之一 
 };
 
 class DellComputer : public Computer
